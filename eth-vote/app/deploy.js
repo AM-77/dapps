@@ -12,6 +12,7 @@ const abi = JSON.parse(fs.readFileSync('app/distSol/Voting_sol_Voting.abi').toSt
 const contract2deploy = new web3.eth.Contract(abi)
 const candidates = ['Abdelaziz Bouteflika', 'Louiza Hanoun', 'Moussa Touati', 'Ali Fawzi Rebaine', 'Ali Benflis']
 
+// get the deployer address
 rl.question("[*] Enter your account address: ", (address) => { 
 
   if (address.length === 42 ){
@@ -26,7 +27,9 @@ rl.question("[*] Enter your account address: ", (address) => {
     .send({ from: address, gas: 1500000, gasPrice: web3.utils.toWei('0.00003', 'ether') })
     .then((newContractInstance) => {
       contract2deploy.options.address = newContractInstance.options.address
-      console.log(newContractInstance.options.address)
+      console.log("[+] The smart contract address: " + newContractInstance.options.address)
+
+      process.exit(0)
     })
   } else {
     console.log("[!] Unvalid address.") 

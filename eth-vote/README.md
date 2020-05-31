@@ -47,3 +47,12 @@ to get the votes count  run:
 ```shell
 yarn run vote-count
 ```
+
+
+## NOTE 
+I included the compiled smart contract files in the `distSol` folder for the sake of simplicity
+you can remove it and recompile it, to do that run 
+
+```shell
+yarn run compile
+```

@@ -54,5 +54,5 @@ I included the compiled smart contract files in the `distSol` folder for the sak
 you can remove it and recompile it, to do that run 
 
 ```shell
-yarn run compile
+yarn run compile 
 ```

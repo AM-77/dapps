@@ -1,0 +1,38 @@
+{
+  "name": "eth-vote",
+  "version": "1.0.0",
+  "description": "ethereum voting dapp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/ganache-cli",
+    "compile": "node_modules/.bin/solcjs --bin --abi app/Voting.sol -o app/distSol",
+    "vote": "node app/vote.js",
+    "vote-count": "node app/voteCount.js",
+    "deploy": "node app/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/am-77/dapps.git"
+  },
+  "keywords": [
+    "dapp",
+    "ethereum",
+    "vote",
+    "web3",
+    "ganache-cli",
+    "solidity",
+    "'smart",
+    "contracts'"
+  ],
+  "author": "AM-77",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/am-77/dapps/issues"
+  },
+  "homepage": "https://github.com/am-77/dapps#readme",
+  "dependencies": {
+    "ganache-cli": "^6.9.1",
+    "solc": "0.6.4",
+    "web3": "1.2.6"
+  }
+}

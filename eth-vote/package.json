@@ -7,7 +7,7 @@
     "start": "node_modules/.bin/ganache-cli",
     "compile": "node_modules/.bin/solcjs --bin --abi app/Voting.sol -o app/distSol",
     "vote": "node app/vote.js",
-    "vote-count": "node app/voteCount.js",
+    "vote-count": "node app/vote-count.js",
     "deploy": "node app/deploy.js"
   },
   "repository": {
